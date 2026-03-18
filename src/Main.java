@@ -3,6 +3,8 @@
 void main() {
 
     String greeting = "Hello World!";
+    int numberOfOptions = 3;
+    boolean mobilityIndicator = true;
 
     //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
     // to see how IntelliJ IDEA suggests fixing it.
@@ -20,4 +22,13 @@ void main() {
         throw new RuntimeException("This is an exception!");
     }
 
+    callSomething();
+
+}
+
+/**
+ * This is a method for call something
+ */
+private void callSomething() {
+    IO.println("Calling something");
 }
