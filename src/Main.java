@@ -2,9 +2,17 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
 
+    // Java 10--
     String greeting = "Hello World!";
     int numberOfOptions = 3;
     boolean mobilityIndicator = true;
+
+    // Using vars Java 10+
+    var greeting1 = "Hello World!";
+    var numberOfOptions1 = 3;
+    var mobilityIndicator1 = true;
+
+    //Most popular JDK versions: 8, 11, 17, 21
 
     //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
     // to see how IntelliJ IDEA suggests fixing it.
@@ -23,6 +31,7 @@ void main() {
     }
 
     callSomething();
+
 
 }
 
