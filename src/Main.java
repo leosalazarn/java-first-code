@@ -6,6 +6,7 @@ void main() {
     String greeting = "Hello World!";
     int numberOfOptions = 3;
     boolean mobilityIndicator = true;
+    float numeroPi = 3.14;
 
     // Using vars Java 10+
     var greeting1 = "Hello World!";
