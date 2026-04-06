@@ -6,7 +6,6 @@ void main() {
     String greeting = "Hi Pola!";
     float numberOne = 10;
     float numberTwo = 3;
-    IO.println(numberOne/numberTwo);
     int a = 10, b = 3;
     System.out.println("a / b: "+ a / b);      // → ?
     System.out.println("a % b: "+ a % b);      // → ?
