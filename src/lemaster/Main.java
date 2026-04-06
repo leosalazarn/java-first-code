@@ -12,7 +12,6 @@ void main() {
     System.out.println(b == 10);
 
 
-    // Using vars Java 10+
     var greeting1 = "Hello World!";
     var numberOfOptions1 = 3;
     var mobilityIndicator1 = true;
