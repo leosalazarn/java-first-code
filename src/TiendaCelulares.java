@@ -12,6 +12,11 @@ public class TiendaCelulares {
         IO.println("Color:          " + cel1.getColor());
         IO.println("Almacenamiento: " + cel1.getStorageCapacity() + "GB");
         IO.println("Precio:         $" + cel1.getPrice());
+        IO.println("\nProducto:       " + cel2.getBrand());
+        IO.println("Referencia:     " + cel2.getModel());
+        IO.println("Color:          " + cel2.getColor());
+        IO.println("Almacenamiento: " + cel2.getStorageCapacity() + "GB");
+        IO.println("Precio:         $" + cel2.getPrice());
         IO.println("\n---------------------------");
         IO.println("Estado actual:  " + estadoStock);
         IO.println("---------------------------");
