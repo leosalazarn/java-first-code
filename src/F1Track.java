@@ -1,30 +1,28 @@
-class f1track{
-    public static void main(String[] args) {
-
-    }
+class F1Track {
 
     private String name;
-        private String country;
-        private String tracktype;
-        private int length;
-        private int turns;
+    private String country;
+    private String tracktype;
+    private int length;
+    private int turns;
 
-        public f1track (String name,String country,String tracktype,int length,int turns){
+    public F1Track(String name, String country, String tracktype, int length, int turns) {
         this.name = name;
         this.country = country;
         this.tracktype = tracktype;
         this.length = length;
         this.turns = turns;
-        }
+    }
+
     void startRace() {
         IO.println("Race started... 🏁🏎️");
     }
 
-     String weather() {
+    String weather() {
         return "Light rain on track 🌧️";
     }
 
-     void runCars(int cars) {
+    void runCars(int cars) {
         IO.println("Cars running on track... 🏎️🏎️🏎️");
         IO.println("Cars: " + cars);
 
