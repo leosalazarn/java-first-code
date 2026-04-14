@@ -4,11 +4,11 @@ class RaceSimulator {
 
 
         var track = new F1Track("Monaco", "Monaco", "Street", 3337, 19);
-        F1Track track1 = new F1Track("Monza", "Italy", "Fast", 5793, 11);
-        F1Track track2 = new F1Track("Silverstone", "UK", "Technical", 5891, 18);
-        F1Track track3 = new F1Track("Spa", "Belgium", "Mixed", 7004, 20);
-        F1Track track4 = new F1Track("Suzuka", "Japan", "Technical", 5807, 18);
-        F1Track track5 = new F1Track("Interlagos", "Brazil", "Short", 4309, 15);
+        var track1 = new F1Track("Monza", "Italy", "Fast", 5793, 11);
+        var track2 = new F1Track("Silverstone", "UK", "Technical", 5891, 18);
+        var track3 = new F1Track("Spa", "Belgium", "Mixed", 7004, 20);
+        var track4 = new F1Track("Suzuka", "Japan", "Technical", 5807, 18);
+        var track5 = new F1Track("Interlagos", "Brazil", "Short", 4309, 15);
 
         String weather = track.weather();
 
@@ -33,6 +33,6 @@ class RaceSimulator {
         IO.println("Clima: " + weather);
 
         track.startRace();
-        track.runCars(20);
+        track.runCars(21);
     }
 }
