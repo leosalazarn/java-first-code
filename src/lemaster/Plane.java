@@ -1,20 +1,13 @@
 package lemaster;
 
-public class Plane {
+public class Plane extends Vehicle {
 
     //Define attributes
-    private String brand;
-    private String model;
-    private String color;
-    private int seats;
     private String airline;
 
     //Define constructor
     public Plane(String brand, String model, String color, int seats, String airline) {
-        this.brand = brand;
-        this.model = model;
-        this.color = color;
-        this.seats = seats;
+        super(brand, model, color, seats);
         this.airline = airline;
     }
 
@@ -30,7 +23,7 @@ public class Plane {
     void fly(int passengers) {
         IO.println("Flying... ✈️");
         IO.println("Passengers: 🧑‍💼🧑‍💼🧑‍💼 " + passengers);
-        if (passengers > this.seats) {
+        if (passengers > super.getSeats()) {
             IO.println("Over capacity! Cannot fly. ⛔⛔⛔⛔");
         } else {
             IO.println("Plane is flying with " + passengers + " passengers. ✅✅✅✅");
@@ -38,19 +31,19 @@ public class Plane {
     }
 
     public String getBrand() {
-        return brand;
+        return super.getBrand();
     }
 
     public String getModel() {
-        return model;
+        return super.getModel();
     }
 
     public String getColor() {
-        return color;
+        return super.getColor();
     }
 
     public int getSeats() {
-        return seats;
+        return super.getSeats();
     }
 
     public String getAirline() {
