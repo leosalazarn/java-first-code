@@ -1,11 +1,13 @@
 package lemaster;
 
+import java.util.Vector;
+
 public class Airport {
 
     void main() {
-        // crear 6 instancias del avión
-        Plane plane = new Plane("Boeing", "A320", "White with Red", 416, "Avianca");
-        Plane plane1 = new Plane("XLS", "A320", "White with Red", 416, "Avianca");
+/*        // Instance
+        var plane = new Plane("Boeing", "A320", "White with Red", 416, "Avianca");
+        var plane1 = new Plane("XLS", "A320", "White with Red", 416, "Avianca");
         Plane plane2 = new Plane("Ferrari", "A320", "White with Red", 416, "Avianca");
         Plane plane3 = new Plane("Boeing", "A320", "White with Red", 416, "Avianca");
         Plane plane4 = new Plane("Boeing", "A500", "Black", 600, "Start Aliance");
@@ -16,17 +18,32 @@ public class Airport {
         plane.fly(416);
         plane.land();
 
-        // Esto es una mala practica
-  /*      IO.println("Este avión es de color: " + plane.color);
-        IO.println("Este avión es de marca: " + plane.brand);
-        IO.println("Este avión es de modelo: " + plane.model);
-        IO.println("Este avión es de aerolínea: " + plane.airline);*/
-
-        // Esto es una buena practica (encapsulamiento)
+        // Encapsulation
         IO.println("Este avión es de color: " + plane.getColor());
         IO.println("Este avión es de marca: " + plane.getBrand());
         IO.println("Este avión es de modelo: " + plane.getModel());
         IO.println("Este avión es de aerolínea: " + plane.getAirline());
+
+        // Create a new instance of my object
+        var Car = new Car();
+
+        Car.move();
+        Car.road();
+        Trailer trailer = new Trailer();
+        trailer.move();*/
+
+        // Create an array of vehicles
+        Vehicle[] vehicles = {
+                new Car(),
+                new Moto("Honda", "2021", "White",  2),
+                new Trailer(),
+        };
+
+        for (Vehicle v : vehicles) {
+            v.move();
+        }
+
+
 
     }
 }
