@@ -1,4 +1,4 @@
-package lemaster;
+package lemaster.dto;
 
 public class Trailer extends Vehicle {
 

@@ -1,13 +1,14 @@
-package lemaster;
+package lemaster.dto;
 
-public class Plane extends Vehicle {
+import lemaster.util.BookingUtil;
+
+public class Plane extends BookingUtil {
 
     //Define attributes
     private String airline;
 
     //Define constructor
     public Plane(String brand, String model, String color, int seats, String airline) {
-        super(brand, model, color, seats);
         this.airline = airline;
     }
 
@@ -23,30 +24,38 @@ public class Plane extends Vehicle {
     void fly(int passengers) {
         IO.println("Flying... ✈️");
         IO.println("Passengers: 🧑‍💼🧑‍💼🧑‍💼 " + passengers);
-        if (passengers > super.getSeats()) {
+        if (passengers > getSeats() ) {
             IO.println("Over capacity! Cannot fly. ⛔⛔⛔⛔");
         } else {
             IO.println("Plane is flying with " + passengers + " passengers. ✅✅✅✅");
         }
     }
 
-    public String getBrand() {
-        return super.getBrand();
+    public void validateSeats(int passengers) {
+        if (passengers > getSeats()) {
+            IO.println("Over capacity! Cannot fly. ⛔⛔⛔⛔");
+        } else {
+            IO.println("Plane is flying with " + passengers + " passengers. ✅✅✅✅");
+        }
     }
 
     public String getModel() {
-        return super.getModel();
+        return getModel();
     }
 
     public String getColor() {
-        return super.getColor();
+        return getColor();
     }
 
     public int getSeats() {
-        return super.getSeats();
+        return getSeats();
     }
 
     public String getAirline() {
         return airline;
+    }
+
+    public static String getBrand() {
+        return "";
     }
 }
