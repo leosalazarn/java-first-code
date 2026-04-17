@@ -17,7 +17,7 @@ public class Plane extends BookingUtil {
         IO.println("Landing...");
     }
 
-    String takeOff() {
+    public String takeOff() {
         return "Taking off...";
     }
 
