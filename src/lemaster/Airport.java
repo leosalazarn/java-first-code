@@ -1,6 +1,9 @@
 package lemaster;
 
-import java.util.Vector;
+import lemaster.dto.Car;
+import lemaster.dto.Moto;
+import lemaster.dto.Trailer;
+import lemaster.dto.Vehicle;
 
 public class Airport {
 

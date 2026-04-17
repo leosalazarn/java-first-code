@@ -1,4 +1,4 @@
-package lemaster;
+package lemaster.dto;
 
 public class Moto extends Vehicle {
     public Moto(String brand, String model, String color, int seats) {
