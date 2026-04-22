@@ -1,9 +1,12 @@
 package lemaster;
 
-import lemaster.dto.Car;
-import lemaster.dto.Moto;
-import lemaster.dto.Trailer;
-import lemaster.dto.Vehicle;
+import lemaster.dto.*;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Airport {
 
@@ -46,21 +49,103 @@ public class Airport {
             v.move();
         }
 
-        Vehicle v = new Car();
 
         // Downcasting
+        Vehicle v = new Car();
         Car a = (Car) v;
         a.move();
 
-
-        Car miAuto = new Car("Toyota", 2022, 4);
-
-        Vehicle v2 = miAuto;
+        // Upcasting
+        Car miAuto = new Car();
+        Vehicle v2 = new Vehicle("Susuki", "Swift", "Red", 4);
 
         v2.move();    // ✅ OK
-        v2.road();    // ❌ ERROR
+
+        Bus bus = new Bus("W", "2023", "RED", 30);
+        Vehicle v3 = bus;
+
+        if (v2 instanceof Trailer) {
+            IO.println(" v2 is a Trailer");
+        }
+
+        // Java 16+  --> Upcasting & instance validation
+        if (v2 instanceof Moto moto) {
+            IO.println(" v2 is a Moto");
+            moto.move();
+        }
+
+        if (v2 instanceof Vehicle) {
+            IO.println(" v2 is a Vehicle");
+        }
+        if (bus instanceof Vehicle) {
+            IO.println(" bus is a Car");
+        }
 
 
+        // Arrays & ArrayList
+        String[] names = new String[3];
+        names[0] = "Leo";
+        names[1] = "Tiago";
+        names[2] = "Camilo";
+
+        IO.println(Arrays.toString(names));
+
+        List<Vehicle> vehicleList = new ArrayList<>();
+        vehicleList.add(v);
+        vehicleList.add(v);
+        vehicleList.add(v);
+        vehicleList.add(v);
+        vehicleList.add(v);
+        vehicleList.add(a);
+        vehicleList.add(a);
+        vehicleList.add(a);
+        vehicleList.add(a);
+        vehicleList.add(a);
+        vehicleList.add(miAuto);
+        vehicleList.add(miAuto);
+        vehicleList.add(miAuto);
+        vehicleList.add(miAuto);
+        vehicleList.add(v2);
+        vehicleList.add(v2);
+        vehicleList.add(v2);
+        vehicleList.add(v2);
+        vehicleList.add(bus);
+        vehicleList.add(bus);
+        vehicleList.add(bus);
+        vehicleList.add(bus);
+        int size = vehicleList.size();
+        IO.println(Arrays.toString(vehicleList.toArray()));
+        IO.println("size is: " + size);
+        // Print the first item/element of the list
+        Vehicle firstVehicle = vehicleList.get(0);
+        Vehicle secondVehicle = vehicleList.get(1);
+        Vehicle thirdVehicle = vehicleList.get(2);
+        IO.println("first vehicle is " + firstVehicle.toString());
+
+        Vehicle lastVehicle = vehicleList.get(21);
+        IO.println("last vehicle is " + lastVehicle.toString());
+
+        vehicleList.clear();
+        IO.println("This list is empty:" + Arrays.toString(vehicleList.toArray()));
+
+        HashMap<String, Vehicle> vehicleMap = new HashMap<>();
+        vehicleMap.put("Fix", firstVehicle);
+        vehicleMap.put("Fix 2nd", secondVehicle);
+        vehicleMap.put("Fix 3rd", thirdVehicle);
+        vehicleMap.put("Fix 6546513s5a5das", lastVehicle);
+        vehicleMap.put("Fix 1234", lastVehicle);
+
+        boolean CarToBeFixed = vehicleMap.containsKey("Fix");
+
+
+        //Obtain vehicles to be fixed in the vehicleMap
+        vehicleMap.forEach((key, value) -> {
+            if (key.contains("Fix")) {
+                IO.println("Vehicle to be fixed: " + value.toString());
+            }
+        });
+
+        IO.println("CarToBeFixed: " + CarToBeFixed);
 
     }
 }
