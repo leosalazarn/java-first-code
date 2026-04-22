@@ -38,13 +38,27 @@ public class Airport {
         // Create an array of vehicles
         Vehicle[] vehicles = {
                 new Car(),
-                new Moto("Honda", "2021", "White",  2),
+                new Moto("Honda", "2021", "White", 2),
                 new Trailer(),
         };
 
         for (Vehicle v : vehicles) {
             v.move();
         }
+
+        Vehicle v = new Car();
+
+        // Downcasting
+        Car a = (Car) v;
+        a.move();
+
+
+        Car miAuto = new Car("Toyota", 2022, 4);
+
+        Vehicle v2 = miAuto;
+
+        v2.move();    // ✅ OK
+        v2.road();    // ❌ ERROR
 
 
 
