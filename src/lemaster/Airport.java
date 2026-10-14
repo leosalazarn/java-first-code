@@ -14,7 +14,7 @@ public class Airport {
 
 
         This is a push
-        var plane = new Plane("Boeing", "A320", "White with Red", 416, "Avianca");.
+        var plane = new Plane("Boeing", "A320", "White with Red", 416, "Avianca");..
         var plane1 = new Plane("XLS", "A320", "White with Red", 416, "Avianca");
         Plane plane2 = new Plane("Ferrari", "A320", "White with Red", 416, "Avianca");
         Plane plane3 = new Plane("Boeing", "A320", "White with Red", 416, "Avianca");
