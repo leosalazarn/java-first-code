@@ -8,6 +8,10 @@ public class TakeOffControlService implements TakeOffControl {
     }
 
     @Override
+    public String land(){
+        return "Landing....";
+    }
+    @Override
     public String stop() {
         return "Stopping...";
     }
