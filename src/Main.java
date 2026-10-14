@@ -13,7 +13,8 @@ void main() {
     System.out.println(a > b);      // → ?
     System.out.println(b == 10);
 
-
+    // Hola tiago subi este código
+    System.out.printn("Hello Tiago");
     // Using vars Java 10+
     var greeting1 = "Hello World!";
     var numberOfOptions1 = 3;
