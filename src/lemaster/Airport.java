@@ -6,12 +6,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Airport {
 
     void main() {
 /*        // Instance
+
+
+        This is a push
         var plane = new Plane("Boeing", "A320", "White with Red", 416, "Avianca");.
         var plane1 = new Plane("XLS", "A320", "White with Red", 416, "Avianca");
         Plane plane2 = new Plane("Ferrari", "A320", "White with Red", 416, "Avianca");
